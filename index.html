@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<script type="module" src="js/main.js"></script>
+	<title>Угадай число</title>
+</head>
+<body>
+	<div id="guessNumber" class="play">
+		<h1 class="title">Угадай число</h1>
+		<div id="start">
+			<input type="number" autocomplete="false" id="startInput" value="1">
+			<span class="dash">-</span>
+			<input type="number" autocomplete="false" id="endInput" value="100">
+			<button id="startButton">Загадай</button>
+		</div>
+		<div id="play">
+			<div id="check">
+				<input type="number" autocomplete="false" id="guessInput">
+				<button id="guess">Угадать</button>
+				<button id="reset">Вернуться</button>
+			</div>
+			<div id="counter">Количество попыток: <span id="counterValue">0</span></div>
+			<div id="message"></div>
+		</div>
+	</div>
+</body>
+</html>

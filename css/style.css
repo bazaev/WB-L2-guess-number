@@ -1,0 +1,92 @@
+* {
+	outline: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-touch-callout: none;
+	user-select: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+body {
+	width: 400px;
+	margin: 0 auto;
+}
+
+.title {
+	text-align: center;
+	text-transform: uppercase;
+	background-color: #efefef;
+	padding: 8px 0;
+	color: #333;
+}
+
+#start,
+#check {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 8px 0;
+}
+
+#start, #play {
+	transition: .3s opacity, .3s transform;
+}
+
+#play {
+	opacity: 0;
+	transform: translateY(-30px);
+	pointer-events: none;
+}
+
+#guessNumber.play #start {
+	transform: translateY(-50%);
+	pointer-events: none;
+	opacity: 0;
+}
+
+#guessNumber.play #play {
+	transform: translateY(-60px);
+	opacity: 1;
+	pointer-events: initial;
+}
+
+.dash {
+	margin: 0 6px;
+}
+
+#startInput,
+#endInput,
+#guessInput {
+	flex: 1;
+	width: 100%;
+	height: 40px;
+	font-size: 20px;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	outline: none;
+	text-align: center;
+	appearance: textfield;
+}
+
+#startButton,
+#guess,
+#reset {
+	flex: none;
+	height: 40px;
+	font-size: 16px;
+	padding: 0 10px;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	outline: none;
+	cursor: pointer;
+	margin-left: 6px;
+}
+
+#hint {
+	font-size: 14px;
+	color: #0008;
+}
